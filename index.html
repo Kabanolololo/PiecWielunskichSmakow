@@ -53,18 +53,13 @@
                 let statusDiv = document.getElementById('status');
             
                 let openingHour;
-                if (day >= 0 && day <= 4) { // Poniedziałek - Piątek
+                if (day >= 1 && day <= 5) { // Poniedziałek - Piątek
                     openingHour = "13:00";
-                } else if (day == 5) { // Sobota
+                } else { // Sobota - Niedziela
                     openingHour = "14:00";
-                } else if (day == 6) { // Niedziela
-                    openingHour = "00:00";
                 }
-            
                 if ((day >= 1 && day <= 5 && hour >= 13 && hour < 24) || 
-                    (day == 6 && hour >= 14 && hour < 24) || 
-                    (day == 0 && hour >= 0 && hour < 2) || 
-                    (day == 0 && hour == 2 && minute <= 30)) {
+                    ((day == 6 || day == 0) && ((hour >= 14 && hour < 24) || (hour == 1 && minute <= 30)))) {
                     statusDiv.innerHTML = "🟢 Pizzeria otwarta, zapraszamy";
                 } else {
                     statusDiv.innerHTML = "🔴 Pizzeria zamknięta, zapraszamy jutro od godziny " + openingHour;
