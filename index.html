@@ -40,11 +40,60 @@
             </div>
         </div>
     </div>
+    <div class="space"></div>
     <div id="content">
-        Maly znacznik ze skryptem sprawdzajacym godzine i mowi nam czy pizzeria jest otwarta czy zamknieta
-        O nas i sie rozpisz oraz wrzuc kilka zdjec pizzy
-        Krotka histiroia pizzy
+        <div id="inside">
+            <div id="status"></div>
+            <script>
+                let date = new Date();
+                let day = date.getDay();
+                let hour = date.getHours();
+                let minute = date.getMinutes();
+        
+                let statusDiv = document.getElementById('status');
+        
+                if ((day >= 1 && day <= 5 && hour >= 13 && hour < 24) || 
+                    (day == 6 && hour >= 14 && hour < 24) || 
+                    (day == 0 && hour >= 0 && hour < 2) || 
+                    (day == 0 && hour == 2 && minute <= 30)) {
+                    statusDiv.innerHTML = "🟢 Pizzeria otwarta, zapraszamy";
+                } else {
+                    statusDiv.innerHTML = "🔴 Pizzeria zamknięta";
+                }
+            </script>
+            <h2 style="margin-top: 30px; font-size: 32px; font-weight: 600; color: white;">O nas, czyli czym właściwie jesteśmy: </h2>
+            <div class="onas">
+                <p>
+                    Witamy w "Piec Wieluńskich Smaków", Twoim miejscu na najlepszą pizzę w Wieluniu. Nasza pizzeria jest dumna z dostarczania najwyższej jakości pizzy, przygotowywanej z najświeższych składników. Każdy składnik, który używamy, jest starannie wybierany, aby zapewnić, że nasza pizza jest zawsze świeża i smaczna.
+                </p>
+                <p>
+                    Nasza misja to dostarczanie niezapomnianych doświadczeń kulinarncyh. Każda pizza, którą tworzymy, jest pieczona z miłością i pasją do autentycznej włoskiej pizzy. Nasze menu jest pełne różnorodnych smaków, które zaspokoją każde podniebienie. Od klasycznej Margherity, po bardziej egzotyczne smaki, jesteśmy pewni, że każdy znajdzie coś dla siebie.
+                </p>
+                <p>
+                    Zapraszamy do odwiedzenia nas w Wieluniu i doświadczenia smaku prawdziwej pizzy. Czekamy na Ciebie z otwartymi ramionami i zapachem świeżo upieczonej pizzy. Do zobaczenia w "Piec Wieluńskich Smaków"!
+                </p>
+            </div> 
+            <img class='kolaz' src="photos/kolaz.jpg">
+            <h2 style="margin-top: 30px; font-size: 32px; font-weight: 600; color: white;">Historia Pizzy:</h2>
+            <div class="onas" style="margin-bottom: 30px;">
+                <h2>Historia Pizzy</h2>
+                <p>
+                    Historia pizzy sięga starożytności, kiedy różne starożytne kultury produkowały płaskie chleby z różnymi dodatkami. Prawdopodobnie prekursorem pizzy była focaccia, płaski chleb znany Rzymianom jako panis focacius, do którego dodawano różne składniki.
+                </p>
+                <p>
+                    Współczesna pizza wyewoluowała z podobnych dań na płaskim chlebie w Neapolu, we Włoszech, w XVIII lub na początku XIX wieku. Słowo "pizza" zostało po raz pierwszy udokumentowane w 997 roku n.e. w Gaecie i następnie w różnych częściach środkowej i południowej Włoch.
+                </p>
+                <p>
+                    Pizza była głównie jedzona we Włoszech i przez emigrantów stamtąd. To się zmieniło po II wojnie światowej, kiedy alianckie wojska stacjonujące we Włoszech zaczęły cieszyć się pizzą wraz z innymi włoskimi potrawami.
+                </p>
+                <p>
+                    W 16. wieku w Neapolu płaski chleb nazywany galette był określany jako pizza; był to przysmak dla biednych ludzi, szczególnie jako jedzenie uliczne, i nie był uważany za przepis kuchenny aż do znacznie późniejszego czasu.
+                </p>
+            </div>
+            <img class='kolaz' style="width: 45%;" src="photos/historia.png">
+        </div>
     </div>
+    <div class="space"></div>
     <div id="footer">
         <div id="lewo">
             <h3>Piec Wieluńskich Smaków</h3>
