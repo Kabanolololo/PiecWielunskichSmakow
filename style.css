@@ -120,7 +120,16 @@ body{
     align-items: center;
     font-size: 28px;
     margin-right: 15px;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
 }
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 .kolaz {
     width: 30%;
     margin-top: 30px;
