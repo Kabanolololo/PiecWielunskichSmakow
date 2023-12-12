@@ -1,0 +1,69 @@
+body{
+    background-color: #d8a067;
+    font-family: 'Lato', sans-serif;
+}
+#opinie{
+    background-color: #d8a067;
+}
+#opiniecontent{
+    color: white;
+    text-align: center;
+}
+#opiniecontent h1{
+    font-weight: 600;
+    color: rgb(199, 50, 50);
+}
+#opiniecontent p{
+    font-size: 24px;
+}
+.opinions{
+    border-radius: 15px;
+    width: 40%;
+    border: groove 1px rgb(199, 50, 50);
+    background-color: white;
+    float: left;
+}
+.opinions:hover{
+    background-color: rgb(236, 236, 236);
+}
+.opinions h1{
+    text-align: center;
+    font-style: initial;
+}
+.opinions h3{
+    text-align: center;
+}
+.opinions p {
+    padding-left: 15px;
+    font-size: 20px;
+    font-style: italic;
+}
+#poletekstowe {
+    margin: auto;
+    width: 20%;
+    padding: 20px;
+    background-color: rgb(199, 50, 50);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+#poletekstowe form {
+    display: flex;
+    flex-direction: column;
+}
+#poletekstowe input, #poletekstowe textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#poletekstowe input[type="submit"] {
+    background-color: rgb(126, 71, 71);
+    color: white;
+    cursor: pointer;
+}
+
+#poletekstowe input[type="submit"]:hover {
+    background-color: rgb(168, 107, 107);
+}
