@@ -1,9 +1,9 @@
 body{
-    background-color: #d8a067;
+    background-color: rgb(163,206,241);
     font-family: 'Lato', sans-serif;
 }
 #opinie{
-    background-color: #d8a067;
+    background-color:  rgb(163,206,241);
 }
 #opiniecontent{
     color: white;
@@ -11,7 +11,7 @@ body{
 }
 #opiniecontent h1{
     font-weight: 600;
-    color: rgb(199, 50, 50);
+    color: #3041db;
 }
 #opiniecontent p{
     font-size: 24px;
@@ -19,16 +19,17 @@ body{
 .opinions{
     border-radius: 15px;
     width: 40%;
-    border: groove 1px rgb(199, 50, 50);
-    background-color: white;
+    border: groove 5px rgb(126, 126, 126);
+    background-color: rgb(231, 236, 239);
     float: left;
 }
 .opinions:hover{
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(202, 202, 202);
 }
 .opinions h1{
     text-align: center;
     font-style: initial;
+    font-family: 'Calistoga', sans-serif;
 }
 .opinions h3{
     text-align: center;
@@ -42,7 +43,7 @@ body{
     margin: auto;
     width: 20%;
     padding: 20px;
-    background-color: rgb(199, 50, 50);
+    background-color: rgb(96,150,186);
     color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
@@ -57,13 +58,13 @@ body{
     border: none;
     border-radius: 5px;
 }
-
 #poletekstowe input[type="submit"] {
-    background-color: rgb(126, 71, 71);
+    background-color: rgb(71, 105, 218);
     color: white;
     cursor: pointer;
 }
 
 #poletekstowe input[type="submit"]:hover {
-    background-color: rgb(168, 107, 107);
+    background-color: #ffffff;
+    color: black;
 }

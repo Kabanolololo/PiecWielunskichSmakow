@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,7 +62,11 @@
                     ((day == 6 || day == 0) && ((hour >= 14 && hour < 24) || (hour == 1 && minute <= 30)))) {
                     statusDiv.innerHTML = "🟢 Pizzeria otwarta, zapraszamy";
                 } else {
-                    statusDiv.innerHTML = "🔴 Pizzeria zamknięta, zapraszamy jutro od godziny " + openingHour;
+                    if (day == date.getDay()) {
+                        statusDiv.innerHTML = "🔴 Pizzeria zamknięta, zapraszamy od godziny " + openingHour;
+                    } else {
+                        statusDiv.innerHTML = "🔴 Pizzeria zamknięta, zapraszamy jutro od godziny " + openingHour;
+                    }
                 }
             </script>
             <h2 style="margin-top: 30px; font-size: 32px; font-weight: 600; color: white;">O nas: </h2>
@@ -93,7 +97,7 @@
                     W 16. wieku w Neapolu płaski chleb nazywany galette był określany jako pizza; był to przysmak dla biednych ludzi, szczególnie jako jedzenie uliczne, i nie był uważany za przepis kuchenny aż do znacznie późniejszego czasu.
                 </p>
             </div>
-            <img class='kolaz' style="width: 45%;" src="photos/historia.png" alt="historia">
+            <img class='kolaz' style="width: 45%; margin-bottom: 30px;" src="photos/historia.png" alt="historia">
         </div>
     </div>
     <div class="space"></div>

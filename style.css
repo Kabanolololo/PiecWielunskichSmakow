@@ -18,7 +18,8 @@ body{
     width: 50%; 
 }
 .logopng{
-    border-radius: 30px;
+    border-radius: 50px;
+    border: 1px solid black;
 }
 .opcja{
     color: white;
@@ -45,7 +46,7 @@ body{
 #podpis{
     margin: auto;
     margin-left: 150px;
-    margin-top: 75px;
+    margin-top: 60px;
     animation: slideDown 2s ease-out;
 }
 @keyframes slideDown {

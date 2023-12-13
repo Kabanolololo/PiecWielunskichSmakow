@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Calistoga&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/x-icon" href="photos/logo.jpg">
     <title>Piec Wieluńskich Smaków</title>
 </head>
@@ -29,7 +30,7 @@
             Opinie
         </div>
     </div>
-    <div class="space"></div>
+    <div class="space" style="background-color: rgb(119, 119, 119);"></div>
     <div id="opinie">
         <div id="opiniecontent">
             <h1>Nasze Opinie:</h1>
@@ -63,26 +64,35 @@
         <h1 style="margin-top: 100px; text-align: center; color: white;">Podziel się swoją opinią:</h1>
         <form action="" method="POST" id="poletekstowe">
             <p>Podaj swoje imię</p>
-            <input name="imie">
+            <input name="imie" id="imie" required>
             <p>Ocena 1/5:</p>
-            <input type="radio" name="ocena" value="1">1
+            <input type="radio" name="ocena" value="1" required>1
             <input type="radio" name="ocena" value="2">2
             <input type="radio" name="ocena" value="3">3
             <input type="radio" name="ocena" value="4">4
             <input type="radio" name="ocena" value="5">5
             <p>Co o nas sądzisz:</p>
-            <textarea name="komentarz" cols="40" rows="5" style="resize: none;"></textarea> <br>
+            <textarea name="komentarz" id="komentarz" cols="40" rows="5" style="resize: none;" required></textarea> <br>
             <input type="submit" value="Prześlij Opinię">
-            <script>
-                document.getElementById('poletekstowe').addEventListener('submit', function(event) {
+        </form>
+        <script>
+            document.getElementById('poletekstowe').addEventListener('submit', function(event) {
+                var imie = document.getElementById('imie').value;
+                var komentarz = document.getElementById('komentarz').value;
+                var ocena = document.querySelector('input[name="ocena"]:checked');
+                if (!imie || !komentarz || !ocena) {
                     event.preventDefault();
-                    alert('Dziękujemy za podzielenie się opinią, zostanie ona dodana w ciągu 24h');
-                });
-            </script>
+                    alert('Proszę wypełnić wszystkie pola formularza.');
+                } else {
+                    event.preventDefault();
+                    alert('Dziękujemy za podzielenie się opinią, zostanie ona dodana i zweryfikowana przez administratora strony w ciągu 24h');
+                }
+            });
+        </script>
         </form>
         </div>
     </div>
-    <div class="space" style="margin-top: 30px;"></div>
+    <div class="space" style="background-color: rgb(119, 119, 119);; margin-top: 30px;"></div>
     <div id="footer">
         <div id="lewo">
             <h3>Piec Wieluńskich Smaków</h3>

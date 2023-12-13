@@ -3,6 +3,87 @@ body{
     font-family: 'Lato', sans-serif;
 }
 #zamow{
-    height: 1000px;
     background-color: #d8a067;
+}
+#zamawianieformularz {
+    color: white;
+    width: 40%; 
+    margin: 0 auto;
+    padding: 30px; 
+    border: 5px dashed #4e4e4e;
+    border-radius: 50px;
+    background-color: #ff80007a;
+}
+#zamawianieformularz p {
+    margin: 0 0 15px; 
+    font-size: 18px; 
+}
+#zamawianieformularz input[type="text"],
+#zamawianieformularz input[type="tel"] {
+    width: 200px;
+    padding: 15px; 
+    border: 1px solid #1d1d1d;
+    border-radius: 4px;
+    font-size: 16px; 
+    background-color: #ffcb97;
+}
+#zamawianieformularz select{
+    width: 30%;
+    padding: 15px; 
+    border: 1px solid #1d1d1d;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #ffcb97;
+}
+#zamawianieformularz textarea {
+    width: 80%;
+    padding: 15px; 
+    border: 1px solid #1d1d1d;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #ffcb97;
+}
+#zamawianieformularz input[type="submit"],
+#zamawianieformularz input[type="reset"] {
+    padding: 15px 30px; 
+    border: none;
+    border-radius: 50px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+}
+#zamawianieformularz input[type="submit"]:hover {
+    background-color: #2db12d;
+    color: white;
+}
+#zamawianieformularz input[type="reset"]:hover {
+    background-color: #b12d2d;
+}
+#zamawianieformularz :disabled { 
+    background-color: #ccc; 
+}
+#zamawianieformularz input[type="text"]:disabled,
+#zamawianieformularz input[type="tel"]:disabled {
+    background-color: #ccc; 
+}
+#zamawianieformularz select:disabled{
+    background-color: #ccc; 
+}
+#wynik{
+    background-color: #2cbe2c;
+    margin: 0 auto;
+    width: 50%;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: 3px black solid;
+    color: white;
+}
+#lewywynik{
+    float: left;
+}
+#prawywynik{
+    float: right;
 }

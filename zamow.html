@@ -22,16 +22,120 @@
             <a class='opcja' href="menu.html">Menu</a>
             <a class='opcja' href="kontakt.html">Kontakt</a>
             <a class='opcja' href="opinie.html">Opinie</a>
-            <a class='opcja' style="color: red;" href="zamow.html">Zamów online</a>
+            <a class='opcja' style="color: #ff8000;" href="zamow.html">Zamów online</a>
         </div>
         <div class="clear"></div>
         <div class="title">
             Zamów do domu
         </div>
     </div>
-    <div class="space"></div>
+    <div class="space" style="margin-bottom: 30px;"></div>
     <div id="zamow">
+        <div id="status" style="margin-left: 150px; margin-top: 30px; margin-bottom: 30px;"></div>
+        <form  action="" method="POST" id="zamawianieformularz">
+            <p >Podaj swoje imię:</p>
+            <input type='text' name="imie" id="imie" required>
+            <p>Podaj swój numer telefonu:</p>
+            <input type='text' placeholder="np. 601404102" name="telefon" id="telefon" required>
+            <p id="message"></p>
+            <script>
+                document.getElementById('telefon').addEventListener('input', function (e) {
+                    var num = e.target.value;
+                    var message = document.getElementById('message');
+                    if (!Number(num)) {
+                        message.innerHTML = '<p style="color:red; padding:5px; background-color:white; margin-top:10px; width:50%; text-align:center; border: 1px solid #1d1d1d; ;border-radius:10px;">Wpisz poprawny numer telefonu</p>';
+                    } else {
+                        document.getElementById('message').textContent = '';
+                    }
+                });
+            </script>
+            <p id="message"></p>
+            <p>Podaj swój adres zamieszkania:</p>
+            <input type='text' name="adres" id="adres" required>
+            <p>Wybierz swoje miasto:</p>
+            <select name="miasto" id="miasto" required>
+                <option value="">Wybierz miasto...</option>
+                <option value="wielun">Wieluń</option>
+                <option value="dabrowa">Dąbrowa (+5zł)</option>
+                <option value="kamionka">Kamionka (+5zł)</option>
+                <option value="niedzielsko">Niedzielsko (+5zł)</option>
+                <option value="nowy_swiat">Nowy Świat (+5zł)</option>
+                <option value="raczyn">Raczyn (+5zł)</option>
+                <option value="ruda">Ruda (+5zł)</option>
+                <option value="rychlowice">Rychłowice (+5zł)</option>
+                <option value="turow">Turów (+5zł)</option>
+                <option value="widoradz">Widoradz (+5zł)</option>
+            </select>
+            <p>Podaj swoje zamówienie:</p>
+            <textarea placeholder="np. Numerek Pizzy, albo nazwa..." name="zamowienie" id="zamowienie" cols="40" rows="2" style="resize: none;" required></textarea> <br>
+            <p>Uwagi do zamówienia:</p>
+            <textarea placeholder="Opcjonalne..." name="uwagi" id="uwagi" cols="20" rows="2" style="resize: none;"></textarea> <br>
+            <input type="submit" value="Zamów">
+            <input type="reset" value="Reset">
+        </form>
+        <div id="wynik" style="display: none;">
+            <div id="lewywynik"></div>
+            <div id="prawywynik"></div>
+            <div class="clear"></div>
+        </div>
+        <script>
+            document.getElementById('zamawianieformularz').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var imie = document.getElementById('imie').value;
+                var telefon = document.getElementById('telefon').value;
+                var adres = document.getElementById('adres').value;
+                var miasto = document.getElementById('miasto').value;
+                var zamowienie = document.getElementById('zamowienie').value;
+                var uwagi = document.getElementById('uwagi').value;
+                var wynik = document.getElementById('wynik');
+                var lewywynik = document.getElementById('lewywynik');
+                var prawywynik = document.getElementById('prawywynik');
+        
+                var telefonRegex = /^[0-9]{9}$/; // Wymaga dokładnie 9 cyfr
+        
+                if (!telefonRegex.test(telefon)) {
+                    wynik.style.display = 'none';
+                    alert('Wpisz prawdziwy numer telefonu');
+                    return;
+                }
+                prawywynik.innerHTML =
+                                "<p style='font-size:14px; font-weight: 600; text-transform:uppercase;'>Twoje dane, dotyczące zamówienia:</p>"+
+                                "Imię: " + imie + "<br>" +
+                                "Telefon: " + telefon + "<br>" +
+                                "Adres: " + adres + "<br>" +
+                                "Miasto: " + miasto + "<br>" +
+                                "Zamówienie: " + zamowienie + "<br>" +
+                                "Uwagi: " + uwagi;
+                lewywynik.innerHTML = "<p style='font-size:14px; font-weight: 600; text-transform:uppercase;'>Czas dostarczenia zamówienia: 30 min</p>"+
+                                "Płatność tylko gotówką <br> Kierowca ma ze sobą około 30 zł <br>" +
+                                "<p style='font-size:14px; font-weight: 600; text-transform:uppercase;'>Dodatkowe informacje:</p>" +
+                                "Dostawa  bezpłatna na terenie Wielunia<br>" +
+                                "Zamówienia powyżej 100 zł mają darmową dostawę <br>";
+                wynik.style.display = 'block';
+            });
+                let date = new Date();
+                let day = date.getDay();
+                let hour = date.getHours();
+                let minute = date.getMinutes();
 
+                let statusDiv = document.querySelector('#status');
+                let formularz = document.querySelector('#zamawianieformularz');
+
+                let openingHour;
+                if (day >= 1 && day <= 5) { // Poniedziałek - Piątek
+                    openingHour = "13:30";
+                } else { // Sobota - Niedziela
+                    openingHour = "14:30";
+                }
+                if ((day >= 1 && day <= 5 && hour >= 13 && hour < 24) || 
+                    ((day == 6 || day == 0) && ((hour >= 14 && hour < 24) || (hour == 1 && minute <= 30)))) {
+                    statusDiv.innerHTML = "🟢 Można składać zamówienia, zapraszamy:";
+                    formularz.querySelectorAll('input, button, textarea, select').forEach(el => el.disabled = false);
+                } else {
+                    statusDiv.innerHTML = "🔴 Zapraszamy jutro! O " + openingHour;
+                    formularz.querySelectorAll('input, button, textarea, select').forEach(el => el.disabled = true);
+                }
+        </script>
     </div>
     <div class="space" style="margin-top: 30px;"></div>
     <div id="footer">
