@@ -1,0 +1,30 @@
+body{
+    background-color: #f2f2f2;
+    font-family: 'Lato', sans-serif;
+}
+#kontakt{
+    background-color: #f2f2f2;
+}
+#informacje{
+    padding: 30px;
+    background-color: rgb(231, 231, 231);
+    width: 15%;
+    border: 1;
+    border: 5px solid rgb(199, 50, 50);
+    position: absolute;
+    top: 750px;
+    left: 0;
+    z-index: 2;
+    margin-left: 100px;
+}
+#mapa {
+    position: relative;
+    z-index: 1;
+}
+#kontakt h1 {
+    text-align: center;
+}
+#kontakt p {
+    text-align: center;
+    font-style: italic;
+}

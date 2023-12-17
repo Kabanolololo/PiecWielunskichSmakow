@@ -33,6 +33,7 @@
     <div id="zamow">
         <div id="status" style="margin-left: 150px; margin-top: 30px; margin-bottom: 30px;"></div>
         <form  action="" method="POST" id="zamawianieformularz">
+            <h1 style="text-align: center; color: white;">Zapraszamy do składania zamówień:</h1>
             <p >Podaj swoje imię:</p>
             <input type='text' name="imie" id="imie" required>
             <p>Podaj swój numer telefonu:</p>
@@ -57,6 +58,7 @@
                 <option value="">Wybierz miasto...</option>
                 <option value="wielun">Wieluń</option>
                 <option value="dabrowa">Dąbrowa (+5zł)</option>
+                <option value="gaszyn">Gaszyn (+3zł)</option>
                 <option value="kamionka">Kamionka (+5zł)</option>
                 <option value="niedzielsko">Niedzielsko (+5zł)</option>
                 <option value="nowy_swiat">Nowy Świat (+5zł)</option>
@@ -132,7 +134,7 @@
                     statusDiv.innerHTML = "🟢 Można składać zamówienia, zapraszamy:";
                     formularz.querySelectorAll('input, button, textarea, select').forEach(el => el.disabled = false);
                 } else {
-                    statusDiv.innerHTML = "🔴 Zapraszamy jutro! O " + openingHour;
+                    statusDiv.innerHTML = "🔴 Przyjmujemy zamówienia od godziny: " + openingHour;
                     formularz.querySelectorAll('input, button, textarea, select').forEach(el => el.disabled = true);
                 }
         </script>
