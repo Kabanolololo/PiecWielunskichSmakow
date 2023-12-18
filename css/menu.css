@@ -4,16 +4,67 @@ body{
     font-family: 'Lato', sans-serif;
 }
 #menu{
-    height: 1000px;
     background-color: #ffed8a;
     background-image: linear-gradient(to left, #ffd59f, #f5b461);
 }
 #menu h1 {
     text-align: center;
-    color: white;
+    color: rgb(199, 50, 50);;
 }
 #menu p {
     text-align: center;
     font-style: italic;
     color: white;
+}
+.pizza{
+    color: white;
+    display: flex;
+    margin-left: 15%;
+    box-sizing: border-box;
+}
+.zdjeciepizza{
+    margin-top: 10px;
+    border-radius: 60%;
+    width:100px ;
+    height: 100px;
+    background-color:  #ffed8a;
+}
+.infopizza{
+    margin-left: 15px;
+    width: 30%;
+}
+.infopizza h1{
+    letter-spacing: 1px;
+}
+.infopizza p {
+    margin-left: 10px;
+    font-style: italic;
+}
+.ceny{
+    display: flex; 
+    align-items: baseline;
+    color: white;
+}
+.pomocnicza{
+    font-weight: 700;
+    color: rgb(199, 50, 50);
+    font-size: 20px;
+}
+.cenowka{
+    height: 30px;
+    margin-top: 15px;
+    background-color: #c9934d;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+}
+.cenowka:hover{
+    cursor: pointer;
+    background-color: #a87036;
+    box-shadow: 0px 15px 20px rgba(201, 147, 77, 0.4), 0px 0px 50px rgba(201, 147, 77, 0.2);
+    transform: translateY(-7px) scale(1.05);
 }
