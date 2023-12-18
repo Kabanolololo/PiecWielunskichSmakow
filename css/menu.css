@@ -1,8 +1,19 @@
 body{
     background-color: #ffed8a;
+    background-image: linear-gradient(to left, #ffd59f, #f5b461);
     font-family: 'Lato', sans-serif;
 }
 #menu{
     height: 1000px;
     background-color: #ffed8a;
+    background-image: linear-gradient(to left, #ffd59f, #f5b461);
+}
+#menu h1 {
+    text-align: center;
+    color: white;
+}
+#menu p {
+    text-align: center;
+    font-style: italic;
+    color: white;
 }

@@ -1,9 +1,9 @@
 body{
-    background-color: rgb(163,206,241);
+    background-color: #c7c7c7;
     font-family: 'Lato', sans-serif;
 }
 #opinie{
-    background-color:  rgb(163,206,241);
+    background-color: #c7c7c7;
 }
 #opiniecontent{
     color: white;
@@ -11,10 +11,10 @@ body{
 }
 #opiniecontent h1{
     font-weight: 600;
-    color: #3041db;
+    color: rgb(199, 50, 50);
 }
 #opiniecontent p{
-    font-size: 24px;
+    margin-bottom: 30px;
 }
 .opinions{
     border-radius: 15px;
@@ -43,7 +43,7 @@ body{
     margin: auto;
     width: 20%;
     padding: 20px;
-    background-color: rgb(96,150,186);
+    background-color: rgb(117, 117, 117);
     color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
@@ -59,7 +59,7 @@ body{
     border-radius: 5px;
 }
 #poletekstowe input[type="submit"] {
-    background-color: rgb(71, 105, 218);
+    background-color: rgb(70, 70, 70);
     color: white;
     cursor: pointer;
 }

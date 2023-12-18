@@ -5,6 +5,13 @@ body{
 #kontakt{
     background-color: #f2f2f2;
 }
+#kontakt h1 {
+    text-align: center;
+}
+#kontakt p {
+    text-align: center;
+    font-style: italic;
+}
 #informacje{
     padding: 30px;
     background-color: rgb(231, 231, 231);
@@ -20,11 +27,4 @@ body{
 #mapa {
     position: relative;
     z-index: 1;
-}
-#kontakt h1 {
-    text-align: center;
-}
-#kontakt p {
-    text-align: center;
-    font-style: italic;
 }
