@@ -35,6 +35,9 @@ body{
     font-size: 16px;
     background-color: #ffcb97;
 }
+#zamawianieformularz select:focus {
+    background-color: #ffd4b3;
+}
 #zamawianieformularz textarea {
     width: 80%;
     padding: 15px; 
@@ -42,6 +45,9 @@ body{
     border-radius: 4px;
     font-size: 16px;
     background-color: #ffcb97;
+}
+#zamawianieformularz textarea:focus {
+    background-color: #ffd4b3;
 }
 #zamawianieformularz input[type="submit"],
 #zamawianieformularz input[type="reset"] {

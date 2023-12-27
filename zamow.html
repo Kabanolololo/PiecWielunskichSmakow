@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="photos/logo.jpg">
-    <title>Piec Wieluńskich Smaków</title>
+    <title>Zamów do domu</title>
 </head>
 <body>
     <div class="header" style="background-image: url(photos/zamow.jpg);">
@@ -38,13 +38,12 @@
             <input type='text' name="imie" id="imie" required>
             <p>Podaj swój numer telefonu:</p>
             <input type='text' placeholder="np. 601404102" name="telefon" id="telefon" required>
-            <p id="message"></p>
             <script>
                 document.getElementById('telefon').addEventListener('input', function (e) {
                     var num = e.target.value;
                     var message = document.getElementById('message');
                     if (!Number(num)) {
-                        message.innerHTML = '<p style="color:red; padding:5px; background-color:white; margin-top:10px; width:50%; text-align:center; border: 1px solid #1d1d1d; ;border-radius:10px;">Wpisz poprawny numer telefonu</p>';
+                        message.innerHTML = '<p style="color:red; padding:5px; background-color:white; margin-top:10px; width:50%; text-align:center; border: 1px solid #1d1d1d;font-weigh:700 ;border-radius:10px;"><b>Wpisz poprawny numer telefonu</b></p>';
                     } else {
                         document.getElementById('message').textContent = '';
                     }
@@ -52,10 +51,9 @@
             </script>
             <p id="message"></p>
             <p>Podaj swój adres zamieszkania:</p>
-            <input type='text' name="adres" id="adres" required>
+            <input placeholder="np. 18-go stycznia 15/7" type='text' name="adres" id="adres" required>
             <p>Wybierz swoje miasto:</p>
             <select name="miasto" id="miasto" required>
-                <option value="">Wybierz miasto...</option>
                 <option value="wielun">Wieluń</option>
                 <option value="dabrowa">Dąbrowa (+5zł)</option>
                 <option value="gaszyn">Gaszyn (+3zł)</option>
@@ -69,9 +67,9 @@
                 <option value="widoradz">Widoradz (+5zł)</option>
             </select>
             <p>Podaj swoje zamówienie:</p>
-            <textarea placeholder="np. Numerek Pizzy, albo nazwa..." name="zamowienie" id="zamowienie" cols="40" rows="2" style="resize: none;" required></textarea> <br>
+            <textarea placeholder="np. Numerek Pizzy, albo nazwa..." name="zamowienie" id="zamowienie" cols="40" rows="2" style="resize: none;" required maxlength="300"></textarea> <br>
             <p>Uwagi do zamówienia:</p>
-            <textarea placeholder="Opcjonalne..." name="uwagi" id="uwagi" cols="20" rows="2" style="resize: none;"></textarea> <br>
+            <textarea placeholder="Opcjonalne..." name="uwagi" id="uwagi" cols="20" rows="2" style="resize: none;" maxlength="100"></textarea> <br>
             <input type="submit" value="Zamów">
             <input type="reset" value="Reset">
         </form>
