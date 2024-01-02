@@ -4,6 +4,7 @@ body{
     font-family: 'Lato', sans-serif;
 }
 #menu{
+    width: 100%;
     background-color: #ffed8a;
     background-image: linear-gradient(to left, #ffd59f, #f5b461);
 }

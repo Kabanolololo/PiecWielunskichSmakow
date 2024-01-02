@@ -4,6 +4,8 @@ body{
     padding: 0;
 }
 #header{
+    overflow: hidden;
+    width: 100%;
     height: 750px;
     background-image: url(photos/background.png);
     background-size: cover;
@@ -15,7 +17,9 @@ body{
     margin: auto;
     display: flex;
     align-items: center;
-    width: 50%; 
+    justify-content: center;
+    width: 100%; 
+    flex-wrap: wrap;
 }
 .logopng{
     border-radius: 50px;
@@ -44,6 +48,7 @@ body{
     clear: both;
 }
 #podpis{
+    position: relative;
     margin: auto;
     margin-left: 150px;
     margin-top: 60px;
@@ -119,7 +124,8 @@ body{
     background-color: rgb(255, 240, 213);
     color: #000000;
     align-items: center;
-    font-size: 28px;
+    font-size: 2vw;
+    min-font-size: 18px;
     margin-right: 15px;
     animation: 2s ease-out 0s 1 slideInFromLeft;
 }
