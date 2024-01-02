@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="photos/logo.jpg">
     <title>Zamów do domu</title>
 </head>
@@ -54,17 +55,17 @@
             <input placeholder="np. 18-go stycznia 15/7" type='text' name="adres" id="adres" required>
             <p>Wybierz swoje miasto:</p>
             <select name="miasto" id="miasto" required>
-                <option value="wielun">Wieluń</option>
-                <option value="dabrowa">Dąbrowa (+5zł)</option>
-                <option value="gaszyn">Gaszyn (+3zł)</option>
-                <option value="kamionka">Kamionka (+5zł)</option>
-                <option value="niedzielsko">Niedzielsko (+5zł)</option>
-                <option value="nowy_swiat">Nowy Świat (+5zł)</option>
-                <option value="raczyn">Raczyn (+5zł)</option>
-                <option value="ruda">Ruda (+5zł)</option>
-                <option value="rychlowice">Rychłowice (+5zł)</option>
-                <option value="turow">Turów (+5zł)</option>
-                <option value="widoradz">Widoradz (+5zł)</option>
+                <option value="Wieluń">Wieluń</option>
+                <option value="Dąbrowa">Dąbrowa (+5zł)</option>
+                <option value="Gaszyn">Gaszyn (+3zł)</option>
+                <option value="Kamionka">Kamionka (+5zł)</option>
+                <option value="Niedzielsko">Niedzielsko (+5zł)</option>
+                <option value="Nowy Świat">Nowy Świat (+5zł)</option>
+                <option value="Raczyn">Raczyn (+5zł)</option>
+                <option value="Ruda">Ruda (+5zł)</option>
+                <option value="Rychłowice">Rychłowice (+5zł)</option>
+                <option value="Turów">Turów (+5zł)</option>
+                <option value="Widoradz">Widoradz (+5zł)</option>
             </select>
             <p>Podaj swoje zamówienie:</p>
             <textarea placeholder="np. Numerek Pizzy, albo nazwa..." name="zamowienie" id="zamowienie" cols="40" rows="2" style="resize: none;" required maxlength="300"></textarea> <br>
@@ -99,16 +100,16 @@
                     return;
                 }
                 prawywynik.innerHTML =
-                                "<p style='font-size:14px; font-weight: 600; text-transform:uppercase;'>Twoje dane, dotyczące zamówienia:</p>"+
+                                "<p style='font-size:26px; font-weight: 600; text-transform:uppercase;'>Twoje dane, dotyczące zamówienia:</p>"+
                                 "Imię: " + imie + "<br>" +
                                 "Telefon: " + telefon + "<br>" +
                                 "Adres: " + adres + "<br>" +
                                 "Miasto: " + miasto + "<br>" +
                                 "Zamówienie: " + zamowienie + "<br>" +
                                 "Uwagi: " + uwagi;
-                lewywynik.innerHTML = "<p style='font-size:14px; font-weight: 600; text-transform:uppercase;'>Czas dostarczenia zamówienia: 30 min</p>"+
+                lewywynik.innerHTML = "<p style='font-size:26px; font-weight: 600; text-transform:uppercase;'>Czas dostarczenia zamówienia: 30 min</p>"+
                                 "Płatność tylko gotówką <br> Kierowca ma ze sobą około 30 zł <br>" +
-                                "<p style='font-size:14px; font-weight: 600; text-transform:uppercase;'>Dodatkowe informacje:</p>" +
+                                "<p style='font-size:26px; font-weight: 600; text-transform:uppercase;'>Dodatkowe informacje:</p>" +
                                 "Dostawa  bezpłatna na terenie Wielunia<br>" +
                                 "Zamówienia powyżej 100 zł mają darmową dostawę <br>";
                 wynik.style.display = 'block';

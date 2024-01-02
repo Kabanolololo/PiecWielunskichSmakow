@@ -78,14 +78,20 @@ body{
     background-color: #ccc; 
 }
 #wynik{
-    background-color: #2cbe2c;
+    background-color: #F0FFFF;
     margin: 0 auto;
     width: 50%;
+    font-family: vt323;
+    font-size: 24px;
     padding: 15px;
     margin-top: 30px;
     border-radius: 15px;
     border: 3px black solid;
-    color: white;
+    border-top: 3px dashed gray;
+    border-left: 3px solid gray;
+    border-right: 3px solid gray;
+    border-bottom: 3px dashed gray;
+    color: black;
 }
 #lewywynik{
     float: left;
