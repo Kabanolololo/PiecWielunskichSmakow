@@ -1,8 +1,11 @@
 .header{
+
     height: 500px;
     background-size: cover;
     background-color: rgba(26, 25, 25, 0.5);
     background-blend-mode: darken;
+    overflow: hidden;
+ 
 }
 .title{
     font-size: 34px;

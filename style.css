@@ -117,6 +117,7 @@ body{
     font-weight: 800;
 }
 .onas {
+    font-family: 'Lato', sans-serif; /*wymuszone bo coś nie chciało działać*/
     width: 45%;
     padding: 20px;
     border: 5px solid rgb(199, 50, 50);
