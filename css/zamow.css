@@ -20,7 +20,7 @@ body{
 }
 #zamawianieformularz input[type="text"],
 #zamawianieformularz input[type="tel"] {
-    width: 200px;
+    width: 55%;
     padding: 15px; 
     border: 1px solid #1d1d1d;
     border-radius: 4px;
@@ -28,7 +28,7 @@ body{
     background-color: #ffcb97;
 }
 #zamawianieformularz select{
-    width: 30%;
+    width: 40%;
     padding: 15px; 
     border: 1px solid #1d1d1d;
     border-radius: 4px;

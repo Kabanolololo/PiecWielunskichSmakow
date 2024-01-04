@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Calistoga&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="photos/logo.jpg">
     <title>Zobacz co o nas sądzą klienci</title>
 </head>
@@ -66,14 +67,14 @@
             <p>Podaj swoje imię</p>
             <input name="imie" id="imie" required>
             <p>Ocena 1/5:</p>
-            <input type="radio" name="ocena" value="1" required>1⭐
+            <input type="radio" name="ocena" value="1" required>1⭐<br>
             <input type="radio" name="ocena" value="2">2⭐
             <input type="radio" name="ocena" value="3">3⭐
             <input type="radio" name="ocena" value="4">4⭐
             <input type="radio" name="ocena" value="5">5⭐
             <p>Co o nas sądzisz:</p>
-            <textarea name="komentarz" id="komentarz" cols="40" rows="5" style="resize: none;" required></textarea> <br>
-            <input type="submit" value="Prześlij Opinię">
+            <textarea name="komentarz" id="komentarz" class="form-control" rows="5" cols="40" style="resize: none;" required></textarea><br>
+            <input type="submit" value="Prześlij Opinię" class="btn btn-primary">
         </form>
         <script>
             document.getElementById('poletekstowe').addEventListener('submit', function(event) {
@@ -124,4 +125,5 @@
             &copy;Piec Wieluńskich Smaków - Muszyński Paweł
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

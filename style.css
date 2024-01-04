@@ -102,9 +102,9 @@ body{
     background-color: rgb(199, 50, 50);
 }
 #content{
-    background-image: url(photos/contentbackground.jpg);
-    background-size:contain;
-    background-size: 100% 100% ;
+    background-image: url(photos/test.jpg);
+    background-color: rgba(26, 25, 25, 0.5);
+    background-blend-mode: darken;
 }
 #inside{
     padding-top: 30px;
@@ -117,19 +117,19 @@ body{
     font-weight: 800;
 }
 .onas {
-    font-family: 'Lato', sans-serif; /*wymuszone bo coś nie chciało działać*/
-    width: 45%;
-    padding: 20px;
-    border: 5px solid rgb(199, 50, 50);
-    border-radius: 15px;
-    background-color: rgb(255, 240, 213);
+    font-family: 'Lato', sans-serif;
+    padding: 1.25rem; 
+    border: .3125rem solid #dc3545; 
+    border-radius: .9375rem; 
+    background-color: #fff0d5;
     color: #000000;
     align-items: center;
-    font-size: 2vw;
-    min-font-size: 18px;
-    margin-right: 15px;
+    width: 30%;
+    font-size: 1.45rem;
+    margin-right: .9375rem;
     animation: 2s ease-out 0s 1 slideInFromLeft;
 }
+
 @keyframes slideInFromLeft {
     0% {
       transform: translateX(-100%);
@@ -138,12 +138,11 @@ body{
       transform: translateX(0);
     }
   }
-.kolaz {
+  .kolaz {
     width: 30%;
-    margin-top: 30px;
-    border-radius: 15px;
-    background-color: rgb(255, 240, 213);
-    border: 5px solid rgb(199, 50, 50);
+    border-radius: .9375rem;
+    background-color: #fff0d5;
+    border: .3125rem solid #dc3545;
 }
 
 .onas, .kolaz {

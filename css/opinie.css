@@ -24,6 +24,8 @@ body{
     float: left;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     line-height: 1.6;
+    font-size:calc(8px + 0.3vw);
+    margin-top: 15px;
 }
 .opinions:hover{
     background-color: rgb(233, 233, 233);
@@ -53,30 +55,29 @@ body{
 #poletekstowe form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-#poletekstowe input{
-    margin-bottom: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+#poletekstowe input, #poletekstowe textarea {
+    margin-bottom: .5rem; 
+    padding: .375rem .75rem;
+    border: 1px solid #ced4da; 
+    border-radius: .25rem; 
     width: 50%; 
     box-sizing: border-box; 
 }
 #poletekstowe textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100%; 
-    box-sizing: border-box; 
+    width: 100%;
 }
 #poletekstowe input[type="submit"] {
-    background-color: rgb(104, 21, 21);
+    background-color: #dc3545; 
     color: white;
     cursor: pointer;
+    border: none; 
+    font-size: 1rem; 
+    width: 100%; 
 }
 
 #poletekstowe input[type="submit"]:hover {
-    background-color: #ffffff;
-    color: black;
+    background-color: #e0a5ab;
+    color: rgb(0, 0, 0);
 }
