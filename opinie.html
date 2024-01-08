@@ -63,19 +63,20 @@
         </div>
         <div class="clear"></div>
         <h1 style="margin-top: 100px; text-align: center; color: rgb(199, 50, 50);">Podziel się swoją opinią:</h1>
-        <form action="" method="POST" id="poletekstowe">
-            <p>Podaj swoje imię</p>
-            <input name="imie" id="imie" required>
-            <p>Ocena 1/5:</p>
-            <input type="radio" name="ocena" value="1" required>1⭐<br>
-            <input type="radio" name="ocena" value="2">2⭐
-            <input type="radio" name="ocena" value="3">3⭐
-            <input type="radio" name="ocena" value="4">4⭐
-            <input type="radio" name="ocena" value="5">5⭐
-            <p>Co o nas sądzisz:</p>
-            <textarea name="komentarz" id="komentarz" class="form-control" rows="5" cols="40" style="resize: none;" required></textarea><br>
-            <input type="submit" value="Prześlij Opinię" class="btn btn-primary">
-        </form>
+                    <form action="" method="POST" id="poletekstowe">
+                        <p>Podaj swoje imię</p>
+                        <input name="imie" id="imie" required>
+                        <p>Ocena 1/5:</p>
+                        <input type="radio" name="ocena" value="1" required>1⭐<br>
+                        <input type="radio" name="ocena" value="2">2⭐
+                        <input type="radio" name="ocena" value="3">3⭐
+                        <input type="radio" name="ocena" value="4">4⭐
+                        <input type="radio" name="ocena" value="5">5⭐
+                        <p>Co o nas sądzisz:</p>
+                        <textarea name="komentarz" id="komentarz" class="form-control" rows="5" cols="40" style="resize: none;" required></textarea><br>
+                        <input type="submit" value="Prześlij Opinię" class="btn btn-primary">
+            </form>
+        </div>
         <script>
             document.getElementById('poletekstowe').addEventListener('submit', function(event) {
                 var imie = document.getElementById('imie').value;
