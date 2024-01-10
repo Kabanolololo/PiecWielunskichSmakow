@@ -77,6 +77,11 @@ body{
 #zamawianieformularz select:disabled{
     background-color: #ccc; 
 }
+@media (max-width: 600px) {
+    #zamawianieformularz {
+        width: 75%;
+    }
+  }
 #wynik{
     background-color: #F0FFFF;
     margin: 0 auto;

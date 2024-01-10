@@ -20,6 +20,7 @@ body{
 }
 .opinions {
     border-radius: 15px;
+    padding: 10px;
     width: 40%;
     border: 5px groove rgb(199, 50, 50);
     background-color: rgb(231, 236, 239);
@@ -45,6 +46,22 @@ body{
     font-size: 20px;
     font-style: italic;
 }
+@media (max-width: 600px) {
+    .opinions{
+        flex-direction: column;
+        width: 65%;
+        padding: 10px;
+    }
+    .opinions h1{
+        font-size: 20px;
+    }
+    .opinions h3{
+        font-size: 17px;
+    }
+    .opinions p {
+        font-size: 15px;
+    }
+  }
 #poletekstowe {
     margin: auto;
     width: 25%;
