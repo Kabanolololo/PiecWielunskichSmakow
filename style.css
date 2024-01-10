@@ -258,6 +258,9 @@ a.footer-social-network-icons.w-inline-block {
     outline: 0;
   }
   @media (max-width: 600px) {
+    #footer{
+        padding: 0 25px; 
+    }
     #lewo h3{
         font-size: 16px;
     }
