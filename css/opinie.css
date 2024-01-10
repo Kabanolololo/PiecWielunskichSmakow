@@ -49,7 +49,7 @@ body{
 @media (max-width: 600px) {
     .opinions{
         flex-direction: column;
-        width: 65%;
+        width: 50%;
         padding: 10px;
         box-shadow: none;
         border: 3px groove rgb(199, 50, 50);
