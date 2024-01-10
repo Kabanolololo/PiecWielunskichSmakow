@@ -11,6 +11,7 @@ body{
 #opiniecontent{
     color: black;
     text-align: center;
+    background-color: #f2f2f2;
 }
 #opiniecontent h1{
     font-weight: 600;
@@ -48,13 +49,12 @@ body{
 }
 #poletekstowe {
     margin: auto;
-    width: 20%;
-    padding: 20px;
+    width: 25%;
+    padding: 1.5%;
     background-color: rgb(199, 50, 50);
     color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgb(128, 18, 18);
-    margin-bottom: 30px;
 }
 #poletekstowe form {
     display: flex;
@@ -66,7 +66,7 @@ body{
     padding: .375rem .75rem;
     border: 1px solid #ced4da; 
     border-radius: .25rem; 
-    width: 50%; 
+    width: 75%; 
     box-sizing: border-box; 
 }
 #poletekstowe textarea {
@@ -76,12 +76,15 @@ body{
     background-color: #dc3545; 
     color: white;
     cursor: pointer;
-    border: none; 
-    font-size: 1rem;
-    width: 50%; 
-    width: auto;
+    border: none;
+    border-radius: 30px;
+    font-size:calc(12px + 0.3vw);
+    flex-wrap: wrap;
+    min-width: 100%; 
+    max-width: 100%; 
 }
 #poletekstowe input[type="submit"]:hover {
     background-color: #e0a5ab;
     color: rgb(0, 0, 0);
+    border: 2px solid rgb(87, 87, 87);
 }

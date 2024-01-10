@@ -22,6 +22,8 @@ body{
     display: flex;
     margin-left: 15%;
     box-sizing: border-box;
+    flex-wrap: wrap;
+
 }
 .zdjeciepizza{
     margin-top: 10px;
@@ -31,15 +33,17 @@ body{
     background-color:  #8B4513;
 }
 .infopizza{
-    margin-left: 15px;
+    margin-left: 1.5%;
     width: 30%;
 }
 .infopizza h1{
     letter-spacing: 1px;
 }
 .infopizza p {
-    margin-left: 10px;
+    margin-left: 5%;
     font-style: italic;
+    flex-wrap: wrap;
+
 }
 .ceny{
     display: flex; 
@@ -56,8 +60,8 @@ body{
     margin-top: 15px;
     background-color: #c9934d;
     color: white;
-    padding: 15px;
-    border-radius: 15px;
+    padding: 10%;
+    border-radius: 10px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     font-weight: bold;

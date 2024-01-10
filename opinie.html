@@ -16,86 +16,88 @@
 </head>
 <body>
     <div style="background-color: #f2f2f2;">
-    <div class="header" style="background-image: url(photos/opinie.jpg);">
-        <div id="pasekwyboru">
-            <div id="logo">
-                <img class='logopng' width="100px" height="100px" src="photos/logo.jpg" alt="logo">
+        <div class="header" style="background-image: url(photos/opinie.jpg);">
+            <div id="pasekwyboru">
+                <div id="logo">
+                    <img class='logopng' width="100px" height="100px" src="photos/logo.jpg" alt="logo">
+                </div>
+                <a class='opcja' href="index.html">Start</a>
+                <a class='opcja' href="menu.html">Menu</a>
+                <a class='opcja' href="kontakt.html">Kontakt</a>
+                <a class='opcja' href="opinie.html">Opinie</a>
+                <a class='opcja' style="color: red;" href="zamow.html">Zamów online</a>
             </div>
-            <a class='opcja' href="index.html">Start</a>
-            <a class='opcja' href="menu.html">Menu</a>
-            <a class='opcja' href="kontakt.html">Kontakt</a>
-            <a class='opcja' href="opinie.html">Opinie</a>
-            <a class='opcja' style="color: red;" href="zamow.html">Zamów online</a>
+            <div class="clear"></div>
+            <div class="title">
+                Opinie
+            </div>
         </div>
-        <div class="clear"></div>
-        <div class="title">
-            Opinie
-        </div>
-    </div>
-    <div class="space"></div>
-    <div id="opinie">
-        <div id="opiniecontent">
-            <h1>Nasze Opinie:</h1>
-            <p style="font-style: italic;">
-                Jeśli jesteś u nas pierwszy raz zobacz, co klienci o nas uważają:
-            </p>
-        </div>
-        <div class="opinions" style="margin-left: 150px;">
-            <h1>
-                Anna 
-            </h1>
-            <p>
-                Pizza naprawdę świetna, polecam każdemu, coś nowego na wieluniu w przystępnej cenie i lepsze od latakii
-            </p>
-            <h3>
-                Ocena: 5/5 
-            </h3>
-        </div>
-        <div class="opinions" style="margin-right: 150px; float: right;">
-            <h1>
-                Michał
-            </h1>
-            <p>
-                Jako koneser pizzerii La spezia stwierdzam, że Piec Wieluńskich smaków ma lepszy sos pomidorowy.
-            </p>
-            <h3>
-                Ocena: 5/5 
-            </h3>
-        </div>
-        <div class="clear"></div>
-        <h1 style="margin-top: 100px; text-align: center; color: rgb(199, 50, 50);">Podziel się swoją opinią:</h1>
-                    <form action="" method="POST" id="poletekstowe">
-                        <p>Podaj swoje imię</p>
-                        <input name="imie" id="imie" required>
-                        <p>Ocena 1/5:</p>
-                        <input type="radio" name="ocena" value="1" required>1⭐<br>
-                        <input type="radio" name="ocena" value="2">2⭐
-                        <input type="radio" name="ocena" value="3">3⭐
-                        <input type="radio" name="ocena" value="4">4⭐
-                        <input type="radio" name="ocena" value="5">5⭐
-                        <p>Co o nas sądzisz:</p>
-                        <textarea name="komentarz" id="komentarz" class="form-control" rows="5" cols="40" style="resize: none;" required></textarea><br>
-                        <input type="submit" value="Prześlij Opinię" class="btn btn-primary">
+        <div class="space"></div>
+        <div id="opinie">
+            <div id="opiniecontent">
+                <h1>Nasze Opinie:</h1>
+                <p style="font-style: italic;">
+                    Jeśli jesteś u nas pierwszy raz zobacz, co klienci o nas uważają:
+                </p>
+            </div>
+            <div class="opinions" style="margin-left: 150px;">
+                <h1>
+                    Anna 
+                </h1>
+                <p>
+                    Pizza naprawdę świetna, polecam każdemu, coś nowego na wieluniu w przystępnej cenie i lepsze od latakii
+                </p>
+                <h3>
+                    Ocena: 5/5 
+                </h3>
+            </div>
+            <div class="opinions" style="margin-right: 150px; float: right;">
+                <h1>
+                    Michał
+                </h1>
+                <p>
+                    Jako koneser pizzerii La spezia stwierdzam, że Piec Wieluńskich smaków ma lepszy sos pomidorowy.
+                </p>
+                <h3>
+                    Ocena: 5/5 
+                </h3>
+            </div>
+            <div class="clear"></div>
+            <h1 style="margin-top: 100px; text-align: center; color: rgb(199, 50, 50);">Podziel się swoją opinią:</h1>
+                        <form action="" method="POST" id="poletekstowe">
+                            <p>Podaj swoje imię</p>
+                            <input name="imie" id="imie" required>
+                            <p>Ocena 1/5:</p>
+                            <input type="radio" name="ocena" value="1" required>1⭐<br>
+                            <input type="radio" name="ocena" value="2">2⭐
+                            <input type="radio" name="ocena" value="3">3⭐
+                            <input type="radio" name="ocena" value="4">4⭐
+                            <input type="radio" name="ocena" value="5">5⭐
+                            <p>Co o nas sądzisz:</p>
+                            <textarea name="komentarz" id="komentarz" class="form-control" rows="5" cols="40" style="resize: none;" required></textarea><br>
+                            <input type="submit" value="Prześlij Opinię" class="btn btn-primary">
+                </form>
+            </div>
+            <script>
+                document.getElementById('poletekstowe').addEventListener('submit', function(event) {
+                    var imie = document.getElementById('imie').value;
+                    var komentarz = document.getElementById('komentarz').value;
+                    var ocena = document.querySelector('input[name="ocena"]:checked');
+                    if (!imie || !komentarz || !ocena) {
+                        event.preventDefault();
+                        alert('Proszę wypełnić wszystkie pola formularza.');
+                    } else {
+                        event.preventDefault();
+                        alert('Dziękujemy za podzielenie się opinią, zostanie ona dodana i zweryfikowana przez administratora strony w ciągu 24h');
+                    }
+                });
+            </script>
             </form>
+            </div>
         </div>
-        <script>
-            document.getElementById('poletekstowe').addEventListener('submit', function(event) {
-                var imie = document.getElementById('imie').value;
-                var komentarz = document.getElementById('komentarz').value;
-                var ocena = document.querySelector('input[name="ocena"]:checked');
-                if (!imie || !komentarz || !ocena) {
-                    event.preventDefault();
-                    alert('Proszę wypełnić wszystkie pola formularza.');
-                } else {
-                    event.preventDefault();
-                    alert('Dziękujemy za podzielenie się opinią, zostanie ona dodana i zweryfikowana przez administratora strony w ciągu 24h');
-                }
-            });
-        </script>
-        </form>
+        <div style="background-color: #f2f2f2;">
+            <div style="height: 10px; background-color:rgb(199, 50, 50); margin-top: 30px;"></div>
         </div>
-    </div>
-        <div class="space" style=""></div>
     </div>
     <div id="footer">
         <div id="lewo">
