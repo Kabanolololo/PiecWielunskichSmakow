@@ -231,6 +231,7 @@ body{
     text-align: right;
 }
 #copy{
+    margin-top: 15px;
     width: 100%;
     text-align: center;
 }
@@ -255,4 +256,25 @@ a.footer-social-network-icons.w-inline-block {
   a.footer-social-network-icons.w-inline-block:hover {
     opacity: 1;
     outline: 0;
+  }
+  @media (max-width: 600px) {
+    #lewo h3{
+        font-size: 16px;
+    }
+    #lewo{
+        font-size: 14px;
+    }
+    #prawo h3{
+        font-size: 16px;
+    }
+    #prawo a{
+        font-size: 15px;
+    }
+    #prawo img{
+        width: 25px;
+    }
+    #prawo img[src="photos/pysznepl.png"]{
+        width: 120px;
+        height: 30px;
+    }
   }
