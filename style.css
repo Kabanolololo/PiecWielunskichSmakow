@@ -129,6 +129,7 @@ body{
             transform: translateY(0);
         }
 }
+}
 .space{
     height: 10px;
     background-color: rgb(199, 50, 50);
