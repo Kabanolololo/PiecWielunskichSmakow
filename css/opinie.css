@@ -50,9 +50,9 @@ body{
     .opinions{
         flex-direction: column;
         width: 50%;
-        padding: 10px;
+        padding: 5px;
         box-shadow: none;
-        border: 3px groove rgb(199, 50, 50);
+        border: 1px groove rgb(199, 50, 50);
     }
     .opinions h1{
         font-size: 20px;
