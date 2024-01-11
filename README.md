@@ -6,3 +6,4 @@ Strona internetowa pizzerii "Pięć Wieluńskich Smaków" to projekt zaliczeniow
 - Możliwość składania zamówień online
 - Informacje o lokalizacji i godzinach otwarcia pizzerii
 - Sekcja z opiniami klientów
+- Obsługa strony internetowej na telefonach
