@@ -6,4 +6,5 @@ Strona internetowa pizzerii "Pięć Wieluńskich Smaków" to projekt zaliczeniow
 - Informacje o lokalizacji i godzinach otwarcia pizzerii (Skrypt),
 - Sekcja z opiniami klientów (Prototyp),
 - Obsługa strony internetowej na telefonach, tabletach oraz różnych innych typach urządzeń,
-- Kilka animacji na stronie, aby wyglądała fajniej :),
+- Kilka animacji na stronie, aby wyglądała fajniej :)
+- Autorskie logo pizzerii
